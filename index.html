@@ -7,9 +7,9 @@
     </head>
     <body>
 
-    <input type="file" id="csvFile" accept=".csv">
-    <button id="parseButton"> Parse CSV </button>
-    <input type="text" id="dateSelect"><br></br>
+    <input type="file" id="csvFile" accept=".csv"><br></br>
+    <input type="text" id="dateSelect">Date Input
+    <div>The Date should be month/day/year, WITHOUT filler zeros. A valid date is 10/5/2023, NOT 10/05/2023, nor 09/14/2023</div><br></br>
     
     <input type="number" id="day1" name="Thursday Verse Count">Thursday Verse Count<br></br>
     <input type="number" id="day2" name="Friday Verse Count">Friday Verse Count<br></br>
@@ -19,6 +19,7 @@
     <input type="number" id="day6" name="Tuesday Verse Count">Tuesday Verse Count<br></br>
     <input type="number" id="day7" name="Wednesday Verse Count">Wednesday Verse Count<br></br>
     <br></br>
+    <button id="parseButton"> Parse CSV </button><br></br>
 
     <table id="table"></table>
     

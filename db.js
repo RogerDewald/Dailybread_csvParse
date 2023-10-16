@@ -58,7 +58,6 @@ function parseCSV(csv, date){
             endCell.textContent = allVerses  + ": is the total number of verses for this week"
             row.appendChild(endCell)
             table.appendChild(row)
-
         }
     }
 }
