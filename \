@@ -1,0 +1,40 @@
+document.getElementById("parseButton").addEventListener("click", function(){
+    const fileInput = document.getElementById("csvFile")
+    const file = fileInput.files[0]
+    if(file){
+        const reader = new FileReader()
+        reader.onload = function(e){
+            const contents = e.target.result
+            parseCSV(contents)
+        }
+        reader.readAsText(file)
+    }
+})
+
+function parseCSV(csv){
+    const table = document.getElementById("table")
+    table.innerHTML = ''
+
+    const lines = csv.split('\n')
+    for (let i = 0; i < lines.length; i++){
+        const row = document.createElement("tr")
+        const cells = lines[i].split(",")
+        let date = "10/05/2003"
+        let  name = "" 
+        for (let j = 0; j<cells.length; j++){
+            const cell = i === 0 ? document.createElement("th") : document.createElement("td")
+            cell = date; 
+            if (date == cells[j]){
+                row.appendChild(cell)
+                
+            }
+
+        }
+        table.appendChild(row)
+    }
+}
+
+function getDate(){
+    let date = document.getElementById("dateSelect")
+    return date
+}
